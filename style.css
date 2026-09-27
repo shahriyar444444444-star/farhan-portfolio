@@ -1,0 +1,863 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(6, 6, 31);
+    box-sizing: border-box;   
+}
+
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+
+
+h3 {
+    margin: 38px;
+    color: white;
+    font-size: 30px;
+    width: 100px;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 80px;
+    width: 100%;
+    position: relative;
+    top: -38px;
+    right: 190px;
+    list-style: none;
+
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+
+}
+
+
+
+
+.profile-pic{
+
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 200px;
+    right: 220px;
+
+
+
+
+}
+
+div h1 {
+
+
+    margin-top: 90px;
+    color: white;
+    font-size: 80px;
+    margin-left: 100px;
+
+
+}
+
+.passion {
+    color: purple;
+    margin-top: 0px;
+}
+
+
+.subtitle {
+
+    font-size: 17px;
+    width: 419px;
+    color: white;
+    margin-left: 110px;
+    margin-top: 10px;
+
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-left: 100px;
+}
+
+.my-btn {
+    font-size: 20px;
+    padding: 15px 30px;
+    min-width: 150px;
+    height: 60px;
+    color: white;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.social-links {
+
+
+    margin-left: 118px;
+    margin-top: 25px;
+    display: flex;
+    gap: 30px;
+    font-size: 17px;
+    color: white;
+}
+
+
+.social-links a {
+
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.social-icon {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+    position: static;
+    border-radius: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+}
+
+
+
+
+/* ============ ABOUT ME SECTION ============ */
+.about-section {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 300px auto 150px;
+    padding: 0 40px;
+    flex-wrap: wrap;
+}
+
+.about-image-wrap {
+    background: transparent;
+    width: 320px;
+    height: 320px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.about-circle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: static;
+    border: 3px solid #a020c0;
+}
+
+.about-text {
+    background: transparent;
+    max-width: 550px;
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-heading {
+    background: transparent;
+    color: white;
+    font-size: 2.8rem;
+    font-family: Georgia, serif;
+    margin-bottom: 15px;
+}
+
+.about-highlight {
+    background: transparent;
+    color: #a020c0;
+}
+
+.about-subheading {
+    background: transparent;
+    color: #c084e0;
+    font-size: 1.2rem;
+    font-family: Georgia, serif;
+    margin-bottom: 20px;
+    width: auto;
+}
+
+.about-desc {
+    background: transparent;
+    color: #b8b8c8;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.about-btn {
+    background: transparent;
+    border: 1px solid #c084e0;
+    color: #f5f5f0;
+    padding: 12px 30px;
+    border-radius: 24px;
+    font-family: Georgia, serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+}
+
+.about-btn:hover {
+    background: #a020c0;
+    border-color: #a020c0;
+}
+
+@media (max-width: 800px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        margin: 200px auto 100px;
+    }
+    .about-text {
+        text-align: center;
+    }
+}
+
+
+
+/* ============ PROJECT CARDS ============ */
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    max-width: 1100px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 250px auto 60px;
+    padding: 0 20px;
+}
+
+.proj-card {
+    position: relative;
+    background: #12122b;
+    border: 1px solid #2a2a4a;
+    border-radius: 14px;
+    padding: 30px 26px;
+    display: flex;
+    flex-direction: column;
+    transition: transform .25s ease, border-color .25s ease;
+}
+
+.proj-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #a020c0, transparent);
+}
+
+.proj-card:hover {
+    transform: translateY(-6px);
+    border-color: #a020c0;
+}
+
+.proj-title {
+    font-size: 1.35rem;
+    color: #c084e0;
+    margin: 6px 0 20px;
+    font-weight: 700;
+    background: transparent;
+}
+
+.proj-list {
+    margin: 0 0 26px;
+    flex-grow: 1;
+    background: transparent;
+}
+
+.proj-item {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 14px;
+    color: #b8b8c8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    background: transparent;
+}
+
+.proj-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #a020c0;
+}
+
+.proj-btn {
+    align-self: flex-start;
+    background: transparent;
+    border: 1px solid #c084e0;
+    color: #f5f5f0;
+    padding: 10px 22px;
+    border-radius: 24px;
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+}
+
+.proj-btn:hover {
+    background: #a020c0;
+    border-color: #a020c0;
+}
+
+@media (max-width: 800px) {
+    .proj-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+/* ============ ROTATING TEXT ANIMATION ============ */
+.cursor {
+    background: transparent;
+    color: purple;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+
+
+
+#about,
+#services,
+#contact {
+    scroll-margin-top: 100px;
+}
+
+
+
+
+
+
+/* ============ SERVICES SECTION ============ */
+.services-section {
+    background: transparent;
+    max-width: 1100px;
+    margin: 350px auto 60px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.services-heading {
+    background: transparent;
+    color: white;
+    font-size: 2.5rem;
+    font-family: Georgia, serif;
+    margin-bottom: 60px;
+}
+
+.services-highlight {
+    background: transparent;
+    color: #a020c0;
+}
+
+.services-grid {
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.services-card {
+    background: #12122b;
+    border: 1px solid #2a2a4a;
+    border-radius: 14px;
+    padding: 40px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform .25s ease, border-color .25s ease;
+}
+
+.services-card:hover {
+    transform: translateY(-6px);
+    border-color: #a020c0;
+}
+
+.services-icon {
+    background: transparent;
+    margin-bottom: 20px;
+}
+
+.services-title {
+    background: transparent;
+    color: #c084e0;
+    font-size: 1.3rem;
+    font-family: Georgia, serif;
+    margin-bottom: 16px;
+    width: auto;
+}
+
+.services-desc {
+    background: transparent;
+    color: #b8b8c8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 26px;
+}
+
+.services-btn {
+    align-self: center;
+    background: transparent;
+    border: 1px solid #c084e0;
+    color: #f5f5f0;
+    padding: 10px 26px;
+    border-radius: 24px;
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+    margin-top: auto;
+}
+
+.services-btn:hover {
+    background: #a020c0;
+    border-color: #a020c0;
+}
+
+@media (max-width: 800px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+/* ============ SCROLL ANIMATION ============ */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+/* ============ CONTACT FORM ============ */
+.contact-section {
+    max-width: 600px;
+    margin: 250px auto 100px;
+    padding: 0 20px;
+    background: transparent;
+    text-align: center;
+}
+
+.contact-heading {
+    background: transparent;
+    color: #c084e0;
+    font-size: 2rem;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+}
+
+.contact-subheading {
+    background: transparent;
+    color: #b8b8c8;
+    font-size: 0.95rem;
+    margin-bottom: 35px;
+}
+
+.contact-form {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.contact-field {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-label {
+    background: transparent;
+    color: #f5f5f0;
+    font-size: 0.9rem;
+    font-family: Georgia, serif;
+}
+
+.contact-input {
+    background: #12122b;
+    border: 1px solid #2a2a4a;
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: #f5f5f0;
+    font-size: 0.95rem;
+    font-family: Georgia, serif;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.contact-input::placeholder {
+    color: #6b6b85;
+}
+
+.contact-input:focus {
+    border-color: #a020c0;
+}
+
+.contact-textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-btn {
+    align-self: flex-start;
+    background: transparent;
+    border: 1px solid #c084e0;
+    color: #f5f5f0;
+    padding: 12px 28px;
+    border-radius: 24px;
+    font-family: Georgia, serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+}
+
+.contact-btn:hover {
+    background: #a020c0;
+    border-color: #a020c0;
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        margin: 80px auto 60px;
+    }
+}
+
+
+
+
+
+html {
+    scroll-behavior: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============ MOBILE RESPONSIVE (ALL SECTIONS) ============ */
+@media (max-width: 600px) {
+
+    /* Nav + Name */
+    h3 {
+        text-align: center;
+        margin: 15px auto 0;
+        width: auto;
+    }
+
+    ul {
+        position: static;
+        justify-content: center;
+        gap: 20px;
+        right: 0;
+        top: 0;
+        flex-wrap: wrap;
+        padding: 10px 0 20px;
+    }
+
+    ul li a {
+        font-size: 15px;
+    }
+
+    /* Hero */
+    .profile-pic {
+        position: static;
+        display: block;
+        margin: 10px auto 0;
+        height: 180px;
+    }
+
+    div h1 {
+        font-size: 38px;
+        margin: 20px 0 0;
+        text-align: center;
+    }
+
+    .subtitle {
+        width: 90%;
+        max-width: 400px;
+        margin: 15px auto 0;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .button-container {
+        margin: 25px auto 0;
+        flex-direction: column;
+        gap: 12px;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .my-btn {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .social-links {
+        margin: 20px auto 0;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    /* About Me */
+    .about-section {
+        padding: 0 25px;
+        margin: 200px auto 100px;
+    }
+
+    .about-image-wrap {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .about-heading {
+        font-size: 2rem;
+    }
+
+    .about-subheading {
+        font-size: 1rem;
+    }
+
+    .about-desc {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+}
+
+
+
+
+/* ============ FOOTER SECTION ============ */
+.site-footer {
+    background: #0d0d24;
+    border-top: 1px solid #2a2a4a;
+    margin-top: 150px;
+    padding: 150px 40px 0;
+}
+
+.footer-top {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 45px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    background: transparent;
+    flex: 1 1 280px;
+    max-width: 320px;
+    align-self: stretch;
+    padding-right: 30px;
+    border-right: 1px solid #2a2a4a;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-logo {
+    background: transparent;
+    color: #c084e0;
+    font-size: 1.7rem;
+    width: auto;
+    margin: 0 0 14px;
+}
+
+.footer-tagline {
+    background: transparent;
+    color: #b8b8c8;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.footer-links {
+    background: transparent;
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 20px;
+    align-self: stretch;
+    padding-right: 30px;
+    border-right: 1px solid #2a2a4a;
+}
+
+
+.footer-social {
+    background: transparent;
+    flex: 1 1 150px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-heading {
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    font-family: Georgia, serif;
+    margin: 0 0 8px;
+    width: auto;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.footer-link {
+    background: transparent;
+    color: #b8b8c8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #a020c0;
+    padding-left: 4px;
+}
+
+.footer-icons {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.footer-icon {
+    height: 22px;
+    width: 22px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.85;
+}
+
+.footer-icon:hover {
+    transform: translateY(-3px);
+    opacity: 1;
+}
+
+.footer-bottom {
+    background: transparent;
+    border-top: 1px solid #2a2a4a;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 22px 0;
+    text-align: center;
+}
+
+.footer-copy {
+    background: transparent;
+    color: #6b6b85;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 800px) {
+    .footer-brand {
+        border-right: none;
+        border-bottom: 1px solid #2a2a4a;
+        padding-right: 0;
+        padding-bottom: 25px;
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer {
+        padding: 80px 25px 0;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-brand {
+        border-right: none;
+        border-bottom: 1px solid #2a2a4a;
+        padding-right: 0;
+        padding-bottom: 25px;
+        max-width: 100%;
+        align-self: auto;
+    }
+}
