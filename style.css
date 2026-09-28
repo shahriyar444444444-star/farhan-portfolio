@@ -861,3 +861,12 @@ html {
         align-self: auto;
     }
 }
+
+
+
+
+svg.social-icon,
+svg.footer-icon {
+    background: transparent;
+    display: block;
+}
