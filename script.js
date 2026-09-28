@@ -1,5 +1,5 @@
 // ============ SCROLL ANIMATION ============
-const animatedElements = document.querySelectorAll('.animate-on-scroll');
+const animatedElements = document.querySelectorAll('.animate-on-scroll, .stagger');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -156,4 +156,34 @@ navMenu.querySelectorAll('a').forEach(link => {
         navToggle.classList.remove('active');
         navMenu.classList.remove('open');
     });
+});
+
+
+
+
+
+
+// ============ SCROLL PROGRESS BAR ============
+const progressBar = document.getElementById('scroll-progress');
+
+function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = percent + '%';
+}
+
+window.addEventListener('scroll', updateProgress, { passive: true });
+updateProgress();
+
+
+// ============ BACK TO TOP BUTTON ============
+const backToTop = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('show', window.scrollY > 500);
+}, { passive: true });
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
