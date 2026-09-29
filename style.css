@@ -1237,7 +1237,17 @@ svg.footer-icon {
 
 
 
-/* ============ PROFILE PIC: ENTRANCE (image load হওয়ার পর) ============ */
+/* ============ PROFILE PIC: ENTRANCE + FLOAT + GLOW ============ */
+@keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-14px); }
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.35; }
+    50%      { opacity: 0.75; }
+}
+
 .profile-pic-wrap {
     opacity: 0;
     transition: opacity 0.8s ease;
@@ -1245,6 +1255,22 @@ svg.footer-icon {
 
 .profile-pic-wrap.loaded {
     opacity: 1;
+}
+
+.profile-pic-wrap::after {
+    content: "";
+    position: absolute;
+    inset: -14px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(160, 32, 192, 0.55), transparent 70%);
+    filter: blur(18px);
+    z-index: -1;
+    opacity: 0.5;
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+.profile-pic-img-float {
+    animation: floatY 5s ease-in-out infinite;
 }
 
 
