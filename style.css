@@ -687,11 +687,12 @@ html {
         font-size: 15px;
     }
 
-    /* Hero */
-    .profile-pic {
+     /* Hero */
+    .profile-pic-wrap {
         position: static;
         display: block;
         margin: 10px auto 0;
+        width: 180px;
         height: 180px;
     }
 
