@@ -1234,18 +1234,16 @@ svg.footer-icon {
 .social-links     { animation-delay: 0.85s; }
 
 
-/* ============ PROFILE PIC: ENTRANCE ONLY ============ */
-@keyframes heroFadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
 
+
+/* ============ PROFILE PIC: ENTRANCE (image load হওয়ার পর) ============ */
 .profile-pic-wrap {
     opacity: 0;
-    animation: heroFadeIn 1s ease-out 0.4s forwards;
+    transition: opacity 0.8s ease;
 }
-.profile-pic-img-float {
-    animation: floatY 5s ease-in-out 1.4s infinite;
+
+.profile-pic-wrap.loaded {
+    opacity: 1;
 }
 
 

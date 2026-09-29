@@ -187,3 +187,20 @@ window.addEventListener('scroll', () => {
 backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+
+
+// ============ PROFILE PIC: REVEAL ONLY AFTER FULL LOAD ============
+const picWrap = document.querySelector('.profile-pic-wrap');
+const picImg = picWrap.querySelector('img');
+
+function revealProfilePic() {
+    picWrap.classList.add('loaded');
+}
+
+if (picImg.complete && picImg.naturalWidth > 0) {
+    revealProfilePic();
+} else {
+    picImg.addEventListener('load', revealProfilePic);
+}
