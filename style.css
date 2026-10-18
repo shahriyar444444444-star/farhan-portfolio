@@ -1378,3 +1378,323 @@ svg.footer-icon {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+
+
+
+
+
+
+
+/* ============ SKILLS SECTION ============ */
+.skills-section {
+    background: transparent;
+    max-width: 780px;
+    margin: 250px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.skills-heading {
+    background: transparent;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.skills-highlight {
+    background: transparent;
+    color: #a020c0;
+}
+
+.skills-grid {
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+.skill-card {
+    width: 160px;
+    padding: 30px 16px 24px;
+    background: #12122b;
+    border: 1px solid #2a2a4a;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    border-color: #a020c0;
+    box-shadow: 0 8px 24px rgba(160, 32, 192, 0.25);
+}
+
+.skill-logo {
+    width: 64px;
+    height: 64px;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-logo {
+    transform: scale(1.1);
+}
+
+.skill-logo svg,
+.skill-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: transparent;
+}
+
+.skill-name {
+    background: transparent;
+    color: #f5f5f0;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+    .skills-section {
+        margin-top: 150px;
+    }
+
+    .skills-heading {
+        font-size: 2rem;
+    }
+
+    .skill-card {
+        width: calc(50% - 14px);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ============ EDUCATION TIMELINE ============ */
+.edu-section {
+    background: transparent;
+    max-width: 900px;
+    margin: 250px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.edu-heading {
+    background: transparent;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.edu-highlight {
+    background: transparent;
+    color: #a020c0;
+}
+
+.edu-subheading {
+    background: transparent;
+    color: #b8b8c8;
+    font-size: 0.95rem;
+    margin-bottom: 60px;
+}
+
+.edu-timeline {
+    position: relative;
+    background: transparent;
+    padding: 10px 0;
+}
+
+/* মাঝের লাইন */
+.edu-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, #a020c0, rgba(160, 32, 192, 0.1));
+}
+
+.edu-item {
+    position: relative;
+    width: 50%;
+    background: transparent;
+    padding-bottom: 60px;
+}
+
+.edu-left {
+    left: 0;
+    padding-right: 50px;
+    text-align: right;
+}
+
+.edu-right {
+    left: 50%;
+    padding-left: 50px;
+    text-align: left;
+}
+
+/* node থেকে card পর্যন্ত ছোট সংযোগ লাইন */
+.edu-item::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    width: 50px;
+    height: 2px;
+    background: rgba(160, 32, 192, 0.5);
+}
+
+.edu-left::before {
+    right: 0;
+}
+
+.edu-right::before {
+    left: 0;
+}
+
+/* গোল node (আইকন) */
+.edu-node {
+    position: absolute;
+    top: 0;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #12122b;
+    border: 2px solid #a020c0;
+    border-radius: 50%;
+    color: #c084e0;
+    box-shadow: 0 0 18px rgba(160, 32, 192, 0.45);
+    z-index: 2;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.edu-left .edu-node {
+    right: -23px;
+}
+
+.edu-right .edu-node {
+    left: -23px;
+}
+
+.edu-item:hover .edu-node {
+    background: #a020c0;
+    color: #ffffff;
+}
+
+.edu-node svg {
+    width: 22px;
+    height: 22px;
+    background: transparent;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* card */
+.edu-card {
+    position: relative;
+    background: #12122b;
+    border: 1px solid #2a2a4a;
+    border-radius: 14px;
+    padding: 26px 28px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.edu-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #a020c0, transparent);
+}
+
+.edu-card:hover {
+    transform: translateY(-6px);
+    border-color: #a020c0;
+    box-shadow: 0 8px 24px rgba(160, 32, 192, 0.25);
+}
+
+.edu-date {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 4px 14px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    color: #c084e0;
+    background: rgba(160, 32, 192, 0.15);
+    border: 1px solid rgba(160, 32, 192, 0.4);
+    border-radius: 20px;
+}
+
+.edu-title {
+    background: transparent;
+    color: #f5f5f0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.edu-desc {
+    background: transparent;
+    color: #b8b8c8;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* মোবাইল */
+@media (max-width: 700px) {
+    .edu-section {
+        margin-top: 150px;
+    }
+
+    .edu-heading {
+        font-size: 2rem;
+    }
+
+    .edu-timeline::before {
+        left: 23px;
+    }
+
+    .edu-item,
+    .edu-left,
+    .edu-right {
+        width: 100%;
+        left: 0;
+        padding: 0 0 40px 64px;
+        text-align: left;
+    }
+
+    .edu-left .edu-node,
+    .edu-right .edu-node {
+        left: 0;
+        right: auto;
+    }
+
+    .edu-left::before,
+    .edu-right::before {
+        left: 46px;
+        right: auto;
+        width: 18px;
+    }
+}
