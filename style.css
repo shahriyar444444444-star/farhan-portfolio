@@ -1698,3 +1698,239 @@ svg.footer-icon {
         width: 18px;
     }
 }
+
+
+
+
+
+
+
+/* ============ MACHINE LEARNING SECTION ============ */
+.ml-section {
+    background: transparent;
+    max-width: 960px;
+    margin: 200px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.ml-heading {
+    background: transparent;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.ml-highlight {
+    background: transparent;
+    color: #a020c0;
+}
+
+.ml-subheading {
+    background: transparent;
+    color: #b8b8c8;
+    font-size: 0.95rem;
+    margin-bottom: 50px;
+}
+
+.ml-wrap {
+    background: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: left;
+}
+
+/* Roadmap */
+.ml-roadmap {
+    background: #12122b;
+    border: 1px solid #2a2a4a;
+    border-radius: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.ml-roadmap:hover {
+    border-color: #a020c0;
+}
+
+.ml-step {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 24px;
+}
+
+.ml-step + .ml-step {
+    border-top: 1px solid #2a2a4a;
+}
+
+.ml-step-info {
+    background: transparent;
+}
+
+.ml-step-name {
+    background: transparent;
+    color: #f5f5f0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.ml-step-note {
+    background: transparent;
+    color: #6b6b85;
+    font-size: 0.82rem;
+}
+
+.ml-status {
+    display: inline-block;
+    padding: 4px 14px;
+    font-size: 0.78rem;
+    letter-spacing: 0.4px;
+    border: 1px solid;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.ml-learned {
+    color: #c084e0;
+    background: rgba(160, 32, 192, 0.15);
+    border-color: rgba(160, 32, 192, 0.4);
+}
+
+.ml-learned::before {
+    content: "✓ ";
+}
+
+.ml-learning {
+    color: #ffffff;
+    background: #a020c0;
+    border-color: #a020c0;
+}
+
+.ml-learning::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #ffffff;
+    animation: mlPulse 1.4s ease-in-out infinite;
+}
+
+.ml-next {
+    color: #6b6b85;
+    background: transparent;
+    border-color: #2a2a4a;
+}
+
+@keyframes mlPulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.3; }
+}
+
+/* Chart */
+.ml-chart {
+    background: #12122b;
+    border: 1px solid #2a2a4a;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: border-color 0.3s ease;
+}
+
+.ml-chart:hover {
+    border-color: #a020c0;
+}
+
+.ml-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: transparent;
+}
+
+.ml-grid line {
+    stroke: #2a2a4a;
+    stroke-width: 1;
+    stroke-dasharray: 4 4;
+}
+
+.ml-axis {
+    stroke: #6b6b85;
+    stroke-width: 1.5;
+}
+
+.ml-dot {
+    fill: #c084e0;
+    opacity: 0;
+    transform: scale(0);
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.ml-line {
+    stroke: #a020c0;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 290;
+    stroke-dashoffset: 290;
+}
+
+/* section দেখা গেলে animation শুরু হবে */
+.ml-section.visible .ml-dot {
+    animation: mlPop 0.4s ease forwards;
+    animation-delay: calc(0.5s + var(--i) * 0.1s);
+}
+
+.ml-section.visible .ml-line {
+    animation: mlDraw 1.6s ease forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes mlPop {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes mlDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.ml-chart-caption {
+    background: transparent;
+    margin-top: 16px;
+    text-align: center;
+    color: #6b6b85;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 800px) {
+    .ml-wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .ml-section {
+        margin-top: 150px;
+    }
+
+    .ml-heading {
+        font-size: 2rem;
+    }
+
+    .ml-step {
+        padding: 16px 18px;
+    }
+}
