@@ -19,7 +19,7 @@ animatedElements.forEach(el => observer.observe(el));
 
 
 // ============ ROTATING TEXT ANIMATION ============
-const roles = ["Web Developer", "Self Learner", "Machine Learning Engineer"];
+const roles = ["Web Developer(Frontend)","Machine Learning Learner", "Self Learner"];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
