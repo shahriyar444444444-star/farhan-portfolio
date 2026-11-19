@@ -2244,3 +2244,56 @@ svg.footer-icon {
         font-size: 1.6rem;
     }
 }
+
+
+
+
+
+
+
+/* ============ PROJECT: ECG LINE + EXTRAS ============ */
+.win-ecg {
+    background: transparent;
+    padding: 8px 0 10px;
+    border-bottom: 1px solid #2a2a4a;
+}
+
+.win-ecg svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: transparent;
+}
+
+.win-ecg path {
+    fill: none;
+    stroke: #c084e0;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+.showcase-section.visible .win-ecg path {
+    animation: ecgDraw 2.4s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes ecgDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.code-comment {
+    background: transparent;
+    color: #6b6b85;
+}
+
+.showcase-note {
+    background: transparent;
+    margin-top: 18px;
+    color: #6b6b85;
+    font-size: 0.8rem;
+}
